@@ -33,18 +33,13 @@ const FAQ: React.FC = () => {
   return (
     <section id="faq" className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Left: Header */}
-          <div>
-            <p className="text-scarlet font-semibold uppercase tracking-widest text-sm mb-4">
-              Frequent Questions
-            </p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-6">
-              Got Questions?
-              <br />
-              <span className="text-alabaster/60">We've Got Answers.</span>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          {/* Left: Massive FAQ Title */}
+          <div className="lg:sticky lg:top-32">
+            <h2 className="text-7xl md:text-8xl lg:text-9xl font-display font-bold text-white leading-none mb-6">
+              FAQ
             </h2>
-            <p className="text-alabaster/60 mb-8">
+            <p className="text-alabaster/60 text-base md:text-lg max-w-md">
               Can't find what you're looking for? Hit us up at{' '}
               <a href="mailto:support@framecoach.ai" className="text-scarlet hover:underline">
                 support@framecoach.ai
