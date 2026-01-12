@@ -56,9 +56,9 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="relative bg-shadow border-t border-white/5 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-9/10 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Section - Logo & Navigation */}
-        <div className="py-16 grid md:grid-cols-2 gap-12 lg:gap-20">
+        <div className="py-16 flex flex-col md:flex-row md:justify-between gap-12">
           {/* Left - Logo */}
           <div>
             <div className="flex items-center gap-2">
@@ -71,8 +71,8 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Right - Navigation Links */}
-          <div className="grid grid-cols-2 gap-8">
+          {/* Right - Navigation Links (grouped together) */}
+          <div className="flex gap-12 lg:gap-16">
             {/* Product Column */}
             <div>
               <h3 className="text-xs font-semibold tracking-wider text-alabaster/50 uppercase mb-4">
@@ -152,15 +152,15 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Giant Watermark Text - Two Lines with Staggered Alignment */}
-      <div className="pointer-events-none select-none overflow-hidden pb-8 sm:pb-12 md:pb-16">
+      <div className="max-w-9/10 mx-auto pl-5 pointer-events-none select-none overflow-hidden pb-4 sm:pb-8 md:pb-12">
         {/* FRAME - Left Aligned (hugs left edge) */}
-        <div className="text-[8rem] sm:text-[10rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-display font-black text-white/[0.07] leading-none tracking-tighter">
-          FRAME
+        <div className="text-[5rem] sm:text-[6rem] md:text-[8rem] lg:text-[10.5rem] xl:text-[13rem] font-display font-black text-white/[0.07] leading-none tracking-tighter">
+          FrameCoach.
         </div>
-        {/* COACH - Right Aligned (hugs right edge) */}
+        {/* COACH - Right Aligned (hugs right edge)
         <div className="text-[8rem] sm:text-[10rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-display font-black text-white/[0.07] leading-none tracking-tighter text-right">
           COACH
-        </div>
+        </div>*/}
       </div>
     </footer>
   );

@@ -129,9 +129,9 @@ const Pricing: React.FC = () => {
                 }`}
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
-                {/* Glow effect on hover for featured card */}
+                {/* Glow effect for featured card - always visible, intensifies on hover */}
                 {plan.featured && (
-                  <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-scarlet/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                  <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-scarlet/20 to-transparent group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
                 )}
 
                 {/* Plan Header */}
