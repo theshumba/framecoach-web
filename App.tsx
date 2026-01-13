@@ -1,4 +1,5 @@
 import React from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { ModalProvider } from './context/ModalContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -33,6 +34,7 @@ const App: React.FC = () => {
         </main>
         <Footer />
         <BetaSignupModal />
+        <SpeedInsights />
       </div>
     </ModalProvider>
   );
