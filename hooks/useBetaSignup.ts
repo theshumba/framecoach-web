@@ -45,6 +45,12 @@ export const useBetaSignup = () => {
       return;
     }
 
+    if (!supabase) {
+      console.error('Supabase not configured');
+      setState('error');
+      return;
+    }
+
     setState('loading');
 
     try {
