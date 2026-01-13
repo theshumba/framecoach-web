@@ -1,4 +1,5 @@
 import React from 'react';
+import { ModalProvider } from './context/ModalContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustBar from './components/TrustBar';
@@ -11,25 +12,29 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+import { BetaSignupModal } from './components/BetaSignupModal';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen font-sans selection:bg-scarlet selection:text-white">
-      <Navbar />
-      <main>
-        <Hero />
-        <TrustBar />
-        <LossAversion />
-        <Benefits />
-        <Process />
-        <FeatureGrid />
-        <Pricing />
-        <Testimonials />
-        <CTA />
-        <FAQ />
-      </main>
-      <Footer />
-    </div>
+    <ModalProvider>
+      <div className="min-h-screen font-sans selection:bg-scarlet selection:text-white">
+        <Navbar />
+        <main>
+          <Hero />
+          <TrustBar />
+          <LossAversion />
+          <Benefits />
+          <Process />
+          <FeatureGrid />
+          <Pricing />
+          <Testimonials />
+          <CTA />
+          <FAQ />
+        </main>
+        <Footer />
+        <BetaSignupModal />
+      </div>
+    </ModalProvider>
   );
 };
 

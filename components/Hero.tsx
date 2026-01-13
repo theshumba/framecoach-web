@@ -1,6 +1,8 @@
 import React from 'react';
+import { useModal } from '@/context/ModalContext';
 
 const Hero: React.FC = () => {
+  const { openModal } = useModal();
   return (
     <section className="min-h-screen relative overflow-hidden">
       {/* Split screen layout */}
@@ -72,7 +74,10 @@ const Hero: React.FC = () => {
 
             {/* CTAs */}
             <div className="animate-fade-in-up animation-delay-400 flex flex-col sm:flex-row items-start gap-4 mt-10">
-              <button className="group relative bg-scarlet hover:bg-scarlet-dark text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-[0_0_50px_rgba(223,41,53,0.4)] active:scale-[0.98]">
+              <button
+                onClick={openModal}
+                className="group relative bg-scarlet hover:bg-scarlet-dark text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-[0_0_50px_rgba(223,41,53,0.4)] active:scale-[0.98]"
+              >
                 <span className="relative z-10 flex items-center gap-2">
                   Get Early Access
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useModal } from '@/context/ModalContext';
 
 const CTA: React.FC = () => {
+  const { openModal } = useModal();
+
   return (
     <section className="py-16 md:py-20 bg-shadow-light/30">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +24,10 @@ const CTA: React.FC = () => {
             </p>
 
             {/* CTA Button */}
-            <button className="group bg-scarlet hover:bg-scarlet-dark text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(223,41,53,0.4)] active:scale-[0.98]">
+            <button
+              onClick={openModal}
+              className="group bg-scarlet hover:bg-scarlet-dark text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(223,41,53,0.4)] active:scale-[0.98]"
+            >
               <span className="flex items-center gap-2">
                 Get Early Access
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
