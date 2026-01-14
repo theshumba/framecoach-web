@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
                   </svg>
                 </span>
               </button>
-          {/* <button className="flex items-center gap-3 text-alabaster hover:text-white font-semibold py-4 px-2 transition-colors group">
+          {/* x<button className="flex items-center gap-3 text-alabaster hover:text-white font-semibold py-4 px-2 transition-colors group">
                 <div className="w-12 h-12 rounded-full border border-alabaster/30 group-hover:border-scarlet group-hover:bg-scarlet/10 flex items-center justify-center transition-all">
                   <svg className="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -117,12 +117,12 @@ const Hero: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-8 bg-black/50"></div>
               </div>
 
-              {/* Alert badge */}
+              {/* Alert badge
               <div className="absolute top-12 right-4">
                 <div className="bg-scarlet text-white px-3 py-1.5 rounded-lg text-xs font-bold tracking-wide shadow-lg animate-pulse-glow">
                   ⚠ CLIPPING DETECTED
                 </div>
-              </div>
+              </div>*/}
 
               {/* AI recommendation overlay */}
               <div className="absolute bottom-12 left-4 right-4">
