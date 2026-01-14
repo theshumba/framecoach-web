@@ -34,7 +34,11 @@ const generateEmailHtml = (firstName: string) => `
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root { color-scheme: dark; supported-color-schemes: dark; }
+    .dark-logo { display: none !important; }
+    .light-logo { display: block !important; }
     @media (prefers-color-scheme: dark) {
+      .dark-logo { display: block !important; }
+      .light-logo { display: none !important; }
       body, .body { background-color: #211C21 !important; }
       .card { background-color: rgba(42, 36, 40, 0.9) !important; }
       p, li, span { color: #E6E8E6 !important; }
@@ -55,8 +59,10 @@ const generateEmailHtml = (firstName: string) => `
               <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td style="vertical-align: middle; padding-right: 12px;">
-                    <!-- FrameCoach logo -->
-                    <img src="https://framecoach.io/logo.png" alt="FrameCoach" width="40" height="32" style="display: block;" />
+                    <!-- FrameCoach logo - light mode (for light backgrounds) -->
+                    <img src="https://framecoach.io/logo-dark.png" alt="FrameCoach" class="light-logo" width="40" height="32" style="display: block;" />
+                    <!-- FrameCoach logo - dark mode (for dark backgrounds) -->
+                    <img src="https://framecoach.io/logo.png" alt="FrameCoach" class="dark-logo" width="40" height="32" style="display: none;" />
                   </td>
                   <td style="vertical-align: middle;">
                     <!-- FrameCoach text -->
@@ -75,7 +81,7 @@ const generateEmailHtml = (firstName: string) => `
               <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 32px;">
                 <tr>
                   <td>
-                    <span style="display: inline-block; background: linear-gradient(135deg, #DF2935 0%, #B8232C 100%); color: #FFFFFF; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 12px; border-radius: 6px;">Beta Access</span>
+                    <span style="display: inline-block; background-color: #DF2935; color: #FFFFFF; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 12px; border-radius: 6px;">Beta Access</span>
                   </td>
                 </tr>
               </table>
