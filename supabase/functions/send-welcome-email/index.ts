@@ -55,8 +55,8 @@ const generateEmailHtml = (firstName: string) => `
 
           <!-- Logo / Header -->
           <tr>
-            <td style="padding-bottom: 40px; text-align: left;">
-              <table cellpadding="0" cellspacing="0" border="0">
+            <td style="padding-bottom: 40px; text-align: center;" align="center">
+              <table cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
                 <tr>
                   <td style="vertical-align: middle; padding-right: 12px;">
                     <!-- FrameCoach logo - light mode (for light backgrounds) -->
