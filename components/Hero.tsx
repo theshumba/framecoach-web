@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
                   </div>
                 ))}
               </div>
-              <span className="text-alabaster/60 text-sm">Trusted by indie filmmakers in 7+ countries • Built by BFI Alumni</span>
+              <span className="text-alabaster/60 text-sm">Trusted by indie filmmakers • Built by BFI Alumni</span>
             </div>
 
             {/* CTAs */}
