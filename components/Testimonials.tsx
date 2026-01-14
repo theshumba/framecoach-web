@@ -9,7 +9,7 @@ const Testimonials: React.FC = () => {
       avatar: "MC",
     },
     {
-      quote: "Shot my first short film with zero blown highlights. My colorist literally asked what changed. FrameCoach changed.",
+      quote: "Shot my first short film with zero blown highlights. My colourist literally asked what changed. FrameCoach changed.",
       name: "Sarah Rodriguez",
       role: "Indie Director",
       avatar: "SR",

@@ -6,27 +6,31 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       question: "What cameras does FrameCoach support?",
-      answer: "We support all major cinema and mirrorless cameras including RED, ARRI, Sony, Blackmagic, Canon, Panasonic, and Fujifilm. If your camera outputs a video signal, we can analyze it.",
+      answer: "We're currently developing camera profiles starting with Sony and Canon support. More cameras will be added based on beta user feedback.",
+    },
+    {
+      question: "What makes FrameCoach different from tutorials?",
+      answer: "Tutorials teach general principles. FrameCoach provides camera-aware decisions in the moment, based on your specific intent, constraints, and gear.",
+    },
+    {
+      question: "Will this work for beginners and advanced users?",
+      answer: "Yes. Beginners get structured guidance and rationale that builds understanding. Advanced users get faster iteration and continuity support that saves time.",
+    },
+    {
+      question: "Does it replace a DP or cinematographer?",
+      answer: "No. FrameCoach supports better decisions and faster execution. It raises the floor for small crews and speeds up workflow for experienced teams, but craft and creative judgement remain yours.",
+    },
+    {
+      question: "Do I need special equipment?",
+      answer: "No. FrameCoach is designed to work with the gear you already have, including minimal lighting setups. It helps you maximise what you own.",
+    },
+    {
+      question: "What if my camera isn't listed?",
+      answer: "You can use a generic profile mode that works across most modern cameras. You can also request your specific model, and we'll prioritise additions based on user demand.",
     },
     {
       question: "Do I need an internet connection on set?",
       answer: "Nope. FrameCoach works entirely offline once installed. Your footage and settings never leave your device. We take privacy seriously—your creative work is yours.",
-    },
-    {
-      question: "Will this replace my DP or camera assistant?",
-      answer: "Absolutely not. FrameCoach is a tool, not a replacement for human expertise. Think of it as a really smart second opinion that never gets tired and never forgets the settings from your last take.",
-    },
-    {
-      question: "How accurate are the AI recommendations?",
-      answer: "Our recommendations are based on analysis of over 2 million professional shots. In blind tests, colorists couldn't distinguish between footage shot with FrameCoach guidance and footage from seasoned DPs.",
-    },
-    {
-      question: "Can I try it before committing?",
-      answer: "Yes! Our Hobbyist tier is free forever with basic features. Creator and Pro plans come with a 14-day free trial and 30-day money-back guarantee. Zero risk.",
-    },
-    {
-      question: "What if I already know my camera inside out?",
-      answer: "Great—you'll get even more value. FrameCoach isn't training wheels. It's a co-pilot. Even pros use us for the shot-matching and consistency features that save hours in post.",
     },
   ];
 
@@ -41,8 +45,8 @@ const FAQ: React.FC = () => {
             </h2>
             <p className="text-alabaster/60 text-base md:text-lg max-w-md">
               Can't find what you're looking for? Hit us up at{' '}
-              <a href="mailto:support@framecoach.ai" className="text-scarlet hover:underline">
-                support@framecoach.ai
+              <a href="mailto:contact@framecoach.io" className="text-scarlet hover:underline">
+                contact@framecoach.io
               </a>
             </p>
           </div>

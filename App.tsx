@@ -26,8 +26,8 @@ const App: React.FC = () => {
           <Benefits />
           <Process />
           <FeatureGrid />
-          <Pricing />
-          <Testimonials />
+          {/* <Pricing /> - Hidden during free beta */}
+          {/* <Testimonials /> - Hidden until we have real testimonials */}
           <CTA />
           <FAQ />
         </main>

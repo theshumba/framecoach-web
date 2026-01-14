@@ -3,16 +3,16 @@ import React from 'react';
 const LossAversion: React.FC = () => {
   const painPoints = [
     {
-      stat: '73%',
-      description: 'of indie footage is unusable due to technical errors',
+      stat: 'Ruined',
+      description: 'Hours of footage lost to blown highlights and bad exposure',
     },
     {
-      stat: '4.2hrs',
-      description: 'average time wasted per shoot on settings trial-and-error',
+      stat: 'Wasted',
+      description: 'Precious shoot time spent fumbling with camera menus',
     },
     {
-      stat: '$2,400',
-      description: 'average cost of a reshoot you could have avoided',
+      stat: 'Blown',
+      description: 'Budgets destroyed by avoidable reshoots',
     },
   ];
 

@@ -10,9 +10,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-scarlet flex items-center justify-center">
-              <div className="w-4 h-4 border-2 border-white rounded-sm"></div>
-            </div>
+            <img src="/logo.png" alt="FrameCoach" className="w-9.5 h-8" />
             <span className="text-2xl font-display font-bold tracking-tight text-white">
               FrameCoach
             </span>
@@ -21,7 +19,6 @@ const Navbar: React.FC = () => {
           {/* Nav Links */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#features" className="text-alabaster/70 hover:text-white transition-colors">Features</a>
-            <a href="#pricing" className="text-alabaster/70 hover:text-white transition-colors">Pricing</a>
             <a href="#faq" className="text-alabaster/70 hover:text-white transition-colors">FAQ</a>
           </div>
 

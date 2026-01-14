@@ -3,9 +3,7 @@ import React from 'react';
 const Footer: React.FC = () => {
   const productLinks = [
     { label: 'Features', href: '#features' },
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'FAQs', href: '#faqs' },
+    { label: 'FAQ', href: '#faq' },
   ];
 
   const companyLinks = [
@@ -62,9 +60,7 @@ const Footer: React.FC = () => {
           {/* Left - Logo */}
           <div>
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded bg-scarlet flex items-center justify-center">
-                <div className="w-5 h-5 border-2 border-white rounded-sm"></div>
-              </div>
+              <img src="/logo.png" alt="FrameCoach" className="w-11.5 h-10" />
               <span className="text-2xl font-display font-bold text-white">
                 FrameCoach
               </span>
@@ -92,7 +88,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Company Column */}
+            {/* Company Column - Hidden for now
             <div>
               <h3 className="text-xs font-semibold tracking-wider text-alabaster/50 uppercase mb-4">
                 Company
@@ -110,6 +106,7 @@ const Footer: React.FC = () => {
                 ))}
               </ul>
             </div>
+            */}
           </div>
         </div>
 

@@ -5,22 +5,22 @@ const Benefits: React.FC = () => {
     {
       title: 'Nail Exposure Every Time',
       description: 'Our AI monitors your scene in real-time and tells you exactly when highlights are about to clip—before you hit record.',
-      result: '94% reduction in blown highlights',
+      result: 'Protect your highlights, every take',
     },
     {
       title: 'Skin Tones That Pop',
       description: 'Mixed lighting used to mean orange faces or green shadows. FrameCoach auto-adjusts white balance bias to keep skin looking natural.',
-      result: 'Broadcast-quality color in any light',
+      result: 'Broadcast-quality colour in any light',
     },
     {
       title: 'Match Shots Across Takes',
-      description: 'Consistency is what separates pros from amateurs. We track your exposure and color across every take so your edit flows seamlessly.',
-      result: '3x faster color grading in post',
+      description: 'Consistency is what separates pros from amateurs. We track your exposure and colour across every take so your edit flows seamlessly.',
+      result: 'Seamless edits, less fixing in post',
     },
     {
       title: 'Clean Shadows, Low Noise',
       description: 'Before cranking ISO, we suggest aperture and shutter tweaks. Mechanical fixes first, digital gain last.',
-      result: 'Usable footage at 2 stops higher',
+      result: 'Cleaner footage in challenging light',
     },
   ];
 

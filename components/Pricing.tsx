@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useModal } from '@/context/ModalContext';
 
 const Pricing: React.FC = () => {
+  const { openModal } = useModal();
   const [isYearly, setIsYearly] = useState(true);
 
   const plans = [
@@ -56,21 +58,32 @@ const Pricing: React.FC = () => {
     <section id="pricing" className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto">
           <div className="inline-block px-4 py-2 rounded-full border border-scarlet/30 bg-scarlet/10 mb-6">
             <p className="text-scarlet font-semibold uppercase tracking-widest text-sm">
-              Pricing
+              Limited Beta
             </p>
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-6">
-            Choose Your Plan
+            Free During Beta
           </h2>
-          <p className="text-lg text-alabaster/60">
-            No hidden fees. No long-term contracts. Just tools that help you shoot better footage.
+          <p className="text-lg text-alabaster/60 mb-10">
+            Get full access to FrameCoach while we're in beta. No credit card required.
           </p>
+          <button
+            onClick={openModal}
+            className="group bg-scarlet hover:bg-scarlet-dark text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(223,41,53,0.4)] active:scale-[0.98]"
+          >
+            <span className="flex items-center gap-2">
+              Join the Beta
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </button>
         </div>
 
-        {/* Monthly/Yearly Toggle */}
+        {/* Pricing Cards - Hidden during beta
         <div className="flex justify-center items-center gap-4 mb-16">
           <div className="inline-flex items-center p-1.5 rounded-full bg-shadow-light border border-white/10">
             <button
@@ -99,7 +112,6 @@ const Pricing: React.FC = () => {
               </span>
             </button>
           </div>
-          {/* Handwritten annotation - only shows when yearly is selected */}
           <div className={`hidden md:flex items-center text-scarlet transition-all duration-500 ${
             isYearly
               ? 'opacity-100 translate-x-0'
@@ -112,7 +124,6 @@ const Pricing: React.FC = () => {
           </div>
         </div>
 
-        {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {plans.map((plan, idx) => {
             const price = isYearly ? plan.yearlyPrice : plan.monthlyPrice;
@@ -129,12 +140,10 @@ const Pricing: React.FC = () => {
                 }`}
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
-                {/* Glow effect for featured card - always visible, intensifies on hover */}
                 {plan.featured && (
                   <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-scarlet/20 to-transparent group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
                 )}
 
-                {/* Plan Header */}
                 <div className="mb-6">
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-2xl font-display font-bold text-white">{plan.name}</h3>
@@ -147,13 +156,11 @@ const Pricing: React.FC = () => {
                   <p className="text-alabaster/50 text-sm">{plan.description}</p>
                 </div>
 
-                {/* Price */}
                 <div className="mb-6 h-20">
                   {isFree ? (
                     <span className="text-5xl font-display font-extrabold text-white">Free</span>
                   ) : (
                     <div className="relative">
-                      {/* Yearly price */}
                       <div className={`transition-all duration-500 ${
                         isYearly
                           ? 'opacity-100 transform translate-y-0'
@@ -168,7 +175,6 @@ const Pricing: React.FC = () => {
                           <span className="text-xs text-scarlet font-semibold">Save ${(monthlyPrice - plan.yearlyPrice) * 12}/yr</span>
                         </div>
                       </div>
-                      {/* Monthly price */}
                       <div className={`transition-all duration-500 ${
                         !isYearly
                           ? 'opacity-100 transform translate-y-0'
@@ -184,7 +190,6 @@ const Pricing: React.FC = () => {
                   )}
                 </div>
 
-                {/* CTA Button */}
                 <button
                   className={`w-full py-4 rounded-xl font-bold transition-all duration-300 active:scale-[0.98] mb-8 ${
                     plan.featured
@@ -195,7 +200,6 @@ const Pricing: React.FC = () => {
                   {plan.cta}
                 </button>
 
-                {/* Features List */}
                 <ul className="space-y-3">
                   {plan.features.map((feature, fIdx) => (
                     <li
@@ -214,10 +218,10 @@ const Pricing: React.FC = () => {
           })}
         </div>
 
-        {/* Bottom note */}
         <p className="text-center text-alabaster/40 text-sm mt-12">
           All plans include a 30-day money-back guarantee. No questions asked.
         </p>
+        */}
       </div>
     </section>
   );

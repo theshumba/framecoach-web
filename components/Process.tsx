@@ -12,11 +12,11 @@ const Process: React.FC = () => {
     {
       step: 2,
       title: 'Point Your Camera',
-      description: 'Our AI analyzes your scene in real-time. Lighting conditions, dynamic range, potential hazards—we see it all.',
+      description: 'Our AI analyses your scene in real-time. Lighting conditions, dynamic range, potential hazards—we see it all.',
     },
     {
       step: 3,
-      title: 'Get Prioritized Settings',
+      title: 'Get Prioritised Settings',
       description: 'We don\'t just dump numbers on you. You get ranked recommendations: what to change first, what matters most, and why.',
     },
     {
@@ -143,7 +143,7 @@ const Process: React.FC = () => {
                   <svg className="w-5 h-5 animate-scale-in animation-delay-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-semibold">Settings Optimized</span>
+                  <span className="font-semibold">Settings Optimised</span>
                 </div>
               </div>
             </div>

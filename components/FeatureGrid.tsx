@@ -13,7 +13,7 @@ const features: Feature[] = [
   },
   {
     title: "AI Scene Analysis",
-    description: "Point and shoot. We instantly detect lighting conditions, contrast ratios, and color temperatures to recommend optimal settings.",
+    description: "Point and shoot. We instantly detect lighting conditions, contrast ratios, and colour temperatures to recommend optimal settings.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -68,9 +68,9 @@ const FeatureGrid: React.FC = () => {
             Features
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-6">
-            Everything You Need.
+            Built for How
             <br />
-            <span className="text-alabaster/60">Nothing You Don't.</span>
+            <span className="text-alabaster/60">You Actually Shoot.</span>
           </h2>
           <p className="text-xl text-alabaster/60">
             Built by cinematographers who were tired of losing shots. Every feature exists because we needed it ourselves.
