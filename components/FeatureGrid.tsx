@@ -1,16 +1,19 @@
 import React from 'react';
 import { Feature } from '../types';
 
+
+{/* {
+  title: "Real-Time Clipping Alerts",
+  description: "See exactly where highlights are blowing out before you record. Our neural engine monitors the hottest pixels in your frame.",
+  icon: (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+    </svg>
+  )
+},*/}
+
 const features: Feature[] = [
-  {
-    title: "Real-Time Clipping Alerts",
-    description: "See exactly where highlights are blowing out before you record. Our neural engine monitors the hottest pixels in your frame.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-      </svg>
-    )
-  },
+
   {
     title: "AI Scene Analysis",
     description: "Point and shoot. We instantly detect lighting conditions, contrast ratios, and colour temperatures to recommend optimal settings.",
@@ -39,20 +42,31 @@ const features: Feature[] = [
     )
   },
   {
-    title: "Exposure Bracketing",
-    description: "Not sure about dynamic range? We suggest bracketing strategies and help you capture the full range for HDR workflows.",
+    title: "Priority-Ranked Recommendations",
+    description: "Get exactly 3 actions ranked by impact. No overwhelming settings menus. Just the changes that matter most for your creative goal, in order.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
       </svg>
     )
   },
   {
-    title: "LUT Recommendations",
-    description: "Shooting log? We suggest the best LUTs for your camera and lighting conditions so you can preview your final look on set.",
+    title: "Skin Tone Protection",
+    description: "Advanced detection ensures all subjects are properly exposed, regardless of skin tone. We flag when darker skin tones risk losing detail before it's too late.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    )
+  },
+  {
+    title: "Adaptive Coaching Depth",
+    description: "New to exposure? Get step-by-step explanations. Experienced shooter? Get concise technical adjustments. The app learns your skill level and adjusts explanation depth accordingly.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
       </svg>
     )
   }
