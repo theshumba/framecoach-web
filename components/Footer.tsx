@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
       {/* Giant Watermark Text - Two Lines with Staggered Alignment */}
       <div className="max-w-9/10 mx-auto pl-5 pointer-events-none select-none overflow-hidden pb-4 sm:pb-8 md:pb-12">
         {/* FRAME - Left Aligned (hugs left edge) */}
-        <div className="text-[4rem] sm:text-[5rem] md:text-[8rem] lg:text-[10.5rem] xl:text-[13rem] font-display font-black text-white/[0.07] leading-none tracking-tighter">
+        <div className="text-[3.5rem] sm:text-[5rem] md:text-[8rem] lg:text-[10.5rem] xl:text-[13rem] font-display font-black text-white/[0.07] leading-none tracking-tighter">
           FrameCoach.
         </div>
         {/* COACH - Right Aligned (hugs right edge)
