@@ -24,10 +24,10 @@ const Hero: React.FC = () => {
 
             {/* Main headline */}
             <h1 className="animate-fade-in-up animation-delay-100">
-              <span className="block text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white leading-[0.95] tracking-tight">
+              <span className="block text-5xl sm:text-6xl lg:text-8xl font-display font-extrabold text-white leading-[0.95] tracking-tight">
                 Stop Guessing.
               </span>
-              <span className="block text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold leading-[0.95] tracking-tight">
+              <span className="block text-5xl sm:text-6xl lg:text-8xl font-display font-extrabold leading-[0.95] tracking-tight">
                 <span className="text-scarlet text-glow">Start Shooting.</span>
               </span>
             </h1>

@@ -60,9 +60,9 @@ const Footer: React.FC = () => {
           {/* Left - Logo */}
           <div>
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="FrameCoach" className="w-11.5 h-10" />
-              <span className="text-2xl font-display font-bold text-white">
-                FrameCoach
+              <img src="/logo.png" alt="FrameCoach" className="w-28 h-24" />
+              <span className="text-4xl font-display font-bold text-white">
+                
               </span>
             </div>
           </div>
@@ -140,9 +140,9 @@ const Footer: React.FC = () => {
         {/* Bottom Section - Copyright & Tagline */}
         <div className="py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
           <p className="text-alabaster/40 text-sm">
-            © 2025 FrameCoach. All rights reserved.
+            © 2026 FrameCoach. All rights reserved.
           </p>
-          <p className="text-alabaster/40 text-sm font-display">
+          <p className="text-alabaster/40 text-sm">
             Frame your vision. Coach your craft.
           </p>
         </div>
@@ -151,8 +151,8 @@ const Footer: React.FC = () => {
       {/* Giant Watermark Text - Two Lines with Staggered Alignment */}
       <div className="max-w-9/10 mx-auto pl-5 pointer-events-none select-none overflow-hidden pb-4 sm:pb-8 md:pb-12">
         {/* FRAME - Left Aligned (hugs left edge) */}
-        <div className="text-[3.5rem] sm:text-[5rem] md:text-[8rem] lg:text-[10.5rem] xl:text-[13rem] font-display font-black text-white/[0.07] leading-none tracking-tighter">
-          FrameCoach.
+        <div className="text-[5.5rem] sm:text-[5rem] md:text-[11.5rem] lg:text-[15.5rem] xl:text-[20rem] font-display font-black text-white/[0.07] leading-none tracking-tighter">
+          FrameCoach
         </div>
         {/* COACH - Right Aligned (hugs right edge)
         <div className="text-[8rem] sm:text-[10rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-display font-black text-white/[0.07] leading-none tracking-tighter text-right">

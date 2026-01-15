@@ -1,6 +1,16 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: 'Refrigerator Deluxe';
+  src: url('/fonts/RefrigeratorDeluxe-ExtraBold.woff2') format('woff2'),
+       url('/fonts/RefrigeratorDeluxe-ExtraBold.woff') format('woff'),
+       url('/fonts/RefrigeratorDeluxe-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
@@ -13,7 +23,7 @@
   --color-white: #FFFFFF;
 
   --font-sans: 'Poppins', sans-serif;
-  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Refrigerator Deluxe', 'Plus Jakarta Sans', sans-serif;
 }
 
 body {

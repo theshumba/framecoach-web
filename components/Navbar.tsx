@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="FrameCoach" className="w-9.5 h-8" />
-            <span className="text-2xl font-display font-bold tracking-tight text-white">
+            <span className="text-4xl font-display font-bold tracking-tight text-white">
               FrameCoach
             </span>
           </div>

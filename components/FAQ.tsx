@@ -36,7 +36,7 @@ const FAQ: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left: Massive FAQ Title */}
           <div className="lg:sticky lg:top-32">
-            <h2 className="text-9xl md:text-10xl lg:text-12xl font-display font-bold text-white leading-none mb-6">
+            <h2 className="text-[9rem] md:text-10xl lg:text-12xl font-display font-bold text-white leading-none mb-6">
               FAQ
             </h2>
             <p className="text-alabaster/60 text-base md:text-lg max-w-md">
