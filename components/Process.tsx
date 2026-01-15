@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Process: React.FC = () => {
-  const [visibleSteps, setVisibleSteps] = useState<Set<number>>(new Set());
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const observersRef = useRef<(IntersectionObserver | null)[]>([]);
   const steps = [
     {
       step: 1,
@@ -26,34 +25,55 @@ const Process: React.FC = () => {
     },
   ];
 
-  // Intersection Observer for scroll-triggered animations
-  // Animations play only once per page load
+  // Cleanup observers on unmount
   useEffect(() => {
-    const observers = stepRefs.current.map((ref, idx) => {
-      if (!ref) return null;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // Add to visible steps
-              setVisibleSteps((prev) => new Set(prev).add(idx));
-              // Immediately unobserve to prevent re-triggering
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
-      );
-
-      observer.observe(ref);
-      return observer;
-    });
-
     return () => {
-      observers.forEach((observer) => observer?.disconnect());
+      observersRef.current.forEach((observer) => observer?.disconnect());
     };
   }, []);
+
+  // Callback ref pattern - each step registers its own observer independently
+  const createStepRef = (idx: number, isEven: boolean) => (element: HTMLDivElement | null) => {
+    if (!element) return;
+
+    // Disconnect any existing observer for this index
+    if (observersRef.current[idx]) {
+      observersRef.current[idx]?.disconnect();
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !element.dataset.animated) {
+            // Mark as animated to prevent re-triggering
+            element.dataset.animated = 'true';
+
+            // Directly manipulate classes - no state changes, no re-renders
+            const textContent = element.querySelector('[data-step-text]');
+            const mockupContent = element.querySelector('[data-step-mockup]');
+            const timelineNode = element.querySelector('[data-timeline-node]');
+
+            if (textContent) {
+              textContent.classList.add('animate-in');
+            }
+            if (mockupContent) {
+              mockupContent.classList.add('animate-in');
+            }
+            if (timelineNode) {
+              timelineNode.classList.add('animate-in');
+            }
+
+            // Unobserve immediately to prevent re-triggering
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
+    );
+
+    observer.observe(element);
+    observersRef.current[idx] = observer;
+  };
 
   // Mockup components for each step
   const StepMockup = ({ step }: { step: number }) => {
@@ -183,21 +203,18 @@ const Process: React.FC = () => {
           <div className="space-y-12 md:space-y-24">
             {steps.map((item, idx) => {
               const isEven = idx % 2 === 0;
-              const isVisible = visibleSteps.has(idx);
 
               return (
                 <div
                   key={idx}
-                  ref={(el) => (stepRefs.current[idx] = el)}
+                  ref={createStepRef(idx, isEven)}
                   className="relative"
-                  style={{ willChange: isVisible ? 'auto' : 'opacity, transform' }}
                 >
                   {/* Timeline Node */}
                   <div className="hidden md:flex absolute left-1/2 top-8 -translate-x-1/2 z-10">
                     <div
-                      className={`w-4 h-4 rounded-full bg-scarlet border-4 border-shadow animate-pulse-glow transition-opacity duration-500 ${
-                        isVisible ? 'opacity-100' : 'opacity-0'
-                      }`}
+                      data-timeline-node
+                      className="w-4 h-4 rounded-full bg-scarlet border-4 border-shadow animate-pulse-glow opacity-0 transition-opacity duration-500"
                     ></div>
                   </div>
 
@@ -205,13 +222,13 @@ const Process: React.FC = () => {
                   <div className={`grid md:grid-cols-2 gap-8 md:gap-16 items-center ${isEven ? '' : 'md:direction-rtl'}`}>
                     {/* Text Content */}
                     <div
-                      className={`space-y-4 ${isEven ? 'md:text-right md:pr-16' : 'md:text-left md:pl-16 md:order-2'}`}
+                      data-step-text
+                      data-direction={isEven ? 'right' : 'left'}
+                      className={`space-y-4 opacity-0 ${isEven ? 'md:text-right md:pr-16' : 'md:text-left md:pl-16 md:order-2'}`}
                       style={{
                         direction: 'ltr',
-                        opacity: isVisible ? 1 : 0,
-                        transform: isVisible ? 'translateX(0)' : `translateX(${isEven ? '3rem' : '-3rem'})`,
+                        transform: `translateX(${isEven ? '3rem' : '-3rem'})`,
                         transition: 'opacity 700ms ease-out 150ms, transform 700ms ease-out 150ms',
-                        willChange: isVisible ? 'auto' : 'opacity, transform'
                       }}
                     >
                       <div className={`inline-block px-3 py-1 rounded-full border border-alabaster/20 bg-shadow-light hover:border-alabaster/40 transition-colors duration-300 ${isEven ? 'md:float-right' : ''}`}>
@@ -228,13 +245,13 @@ const Process: React.FC = () => {
 
                     {/* Mockup */}
                     <div
-                      className={`${isEven ? 'md:pl-16 md:order-2' : 'md:pr-16'}`}
+                      data-step-mockup
+                      data-direction={isEven ? 'left' : 'right'}
+                      className={`opacity-0 ${isEven ? 'md:pl-16 md:order-2' : 'md:pr-16'}`}
                       style={{
                         direction: 'ltr',
-                        opacity: isVisible ? 1 : 0,
-                        transform: isVisible ? 'translateX(0)' : `translateX(${isEven ? '-3rem' : '3rem'})`,
+                        transform: `translateX(${isEven ? '-3rem' : '3rem'})`,
                         transition: 'opacity 700ms ease-out 300ms, transform 700ms ease-out 300ms',
-                        willChange: isVisible ? 'auto' : 'opacity, transform'
                       }}
                     >
                       <div className="relative group">

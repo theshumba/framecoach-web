@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
 
             {/* Subheadline */}
             <p className="animate-fade-in-up animation-delay-200 text-lg sm:text-xl text-alabaster/60 max-w-lg mt-8 leading-relaxed">
-              AI that analyses your scene and tells you exactly which settings to dial in—<span className="text-white font-medium">before you hit record</span>.
+              AI that analyses your scene and tells you exactly which settings to dial in, <span className="text-white font-medium">before you hit record</span>.
             </p>
 
             {/* Social proof */}

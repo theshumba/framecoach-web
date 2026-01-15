@@ -47,7 +47,7 @@ export const BetaSignupModal: React.FC = () => {
     closeModal();
   };
 
-  const isFormValid = formData.name && formData.email && formData.camera && formData.role && formData.experience;
+  const isFormValid = formData.name && formData.email;
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && handleClose()}>
