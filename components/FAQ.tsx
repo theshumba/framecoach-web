@@ -25,12 +25,8 @@ const FAQ: React.FC = () => {
       answer: "No. FrameCoach is designed to work with the gear you already have, including minimal lighting setups. It helps you maximise what you own.",
     },
     {
-      question: "What if my camera isn't listed?",
-      answer: "You can use a generic profile mode that works across most modern cameras. You can also request your specific model, and we'll prioritise additions based on user demand.",
-    },
-    {
       question: "Do I need an internet connection on set?",
-      answer: "Nope. FrameCoach works entirely offline once installed. Your footage and settings never leave your device. We take privacy seriously—your creative work is yours.",
+      answer: "Yes, for now. FrameCoach currently requires an internet connection to process your scene. As AI capabilities advance, we plan to bring processing fully on-device so you can work offline.",
     },
   ];
 
